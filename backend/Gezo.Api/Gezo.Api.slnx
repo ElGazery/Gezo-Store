@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Gezo.Api/Gezo.Api.csproj" />
+  <Project Path="Gezo.Application/Gezo.Application.csproj" />
+  <Project Path="Gezo.Domain/Gezo.Domain.csproj" />
+  <Project Path="Gezo.Infrastructure/Gezo.Infrastructure.csproj" />
+</Solution>

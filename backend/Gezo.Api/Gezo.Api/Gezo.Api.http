@@ -1,0 +1,6 @@
+@Gezo.Api_HostAddress = http://localhost:5289
+
+GET {{Gezo.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
