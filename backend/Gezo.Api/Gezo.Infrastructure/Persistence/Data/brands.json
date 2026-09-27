@@ -1,0 +1,142 @@
+[
+  {
+    "Id": 1,
+    "Name": "Apple",
+    "Description": "Innovative technology and premium devices",
+    "Slug": "apple",
+    "LogoUrl": "https://cdn.gezo.com/brands/apple-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-25T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "Name": "Samsung",
+    "Description": "Global leader in electronics and mobile devices",
+    "Slug": "samsung",
+    "LogoUrl": "https://cdn.gezo.com/brands/samsung-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-26T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 3,
+    "Name": "Sony",
+    "Description": "Consumer electronics and entertainment products",
+    "Slug": "sony",
+    "LogoUrl": "https://cdn.gezo.com/brands/sony-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-27T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 4,
+    "Name": "LG",
+    "Description": "Home appliances and electronics",
+    "Slug": "lg",
+    "LogoUrl": "https://cdn.gezo.com/brands/lg-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-28T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 5,
+    "Name": "Dell",
+    "Description": "Computers and computing solutions",
+    "Slug": "dell",
+    "LogoUrl": "https://cdn.gezo.com/brands/dell-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-29T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 6,
+    "Name": "HP",
+    "Description": "Laptops, printers and computing devices",
+    "Slug": "hp",
+    "LogoUrl": "https://cdn.gezo.com/brands/hp-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-11-30T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 7,
+    "Name": "Logitech",
+    "Description": "Computer peripherals and accessories",
+    "Slug": "logitech",
+    "LogoUrl": "https://cdn.gezo.com/brands/logitech-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-01T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 8,
+    "Name": "Nike",
+    "Description": "Athletic footwear and apparel",
+    "Slug": "nike",
+    "LogoUrl": "https://cdn.gezo.com/brands/nike-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-02T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 9,
+    "Name": "Adidas",
+    "Description": "Sportswear and athletic equipment",
+    "Slug": "adidas",
+    "LogoUrl": "https://cdn.gezo.com/brands/adidas-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-03T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 10,
+    "Name": "Puma",
+    "Description": "Sports lifestyle brand",
+    "Slug": "puma",
+    "LogoUrl": "https://cdn.gezo.com/brands/puma-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-04T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 11,
+    "Name": "Zara",
+    "Description": "Contemporary fashion and clothing",
+    "Slug": "zara",
+    "LogoUrl": "https://cdn.gezo.com/brands/zara-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-05T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 12,
+    "Name": "IKEA",
+    "Description": "Affordable and functional furniture",
+    "Slug": "ikea",
+    "LogoUrl": "https://cdn.gezo.com/brands/ikea-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-06T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 13,
+    "Name": "Philips",
+    "Description": "Home appliances and personal care devices",
+    "Slug": "philips",
+    "LogoUrl": "https://cdn.gezo.com/brands/philips-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-07T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  },
+  {
+    "Id": 14,
+    "Name": "KitchenAid",
+    "Description": "Premium kitchen appliances and tools",
+    "Slug": "kitchenaid",
+    "LogoUrl": "https://cdn.gezo.com/brands/kitchenaid-logo.png",
+    "IsActive": true,
+    "CreatedAt": "2025-12-08T10:00:00Z",
+    "UpdatedAt": "2026-09-05T10:00:00Z"
+  }
+]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gezo.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af7b1e396b26404fa50e08ce5181fd3e071c6dd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fdb4c7f92573f75013351daa4fa413d3e0c5fc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gezo.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gezo.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

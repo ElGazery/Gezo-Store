@@ -1,7 +1,52 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Gezo Store\\backend\\Gezo.Api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.domain\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|solutionrelative:gezo.domain\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|solutionrelative:gezo.domain\\entities\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|solutionrelative:gezo.domain\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B8EF268-30CC-86F4-710C-627D48BA6C82}|Gezo.Domain\\Gezo.Domain.csproj|solutionrelative:gezo.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF86ADA-FA01-599C-C3B8-EDE95BC60330}|Gezo.Application\\Gezo.Application.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF86ADA-FA01-599C-C3B8-EDE95BC60330}|Gezo.Application\\Gezo.Application.csproj|solutionrelative:gezo.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|solutionrelative:gezo.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.infrastructure\\gezo.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|solutionrelative:gezo.infrastructure\\gezo.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.infrastructure\\persistence\\configuration\\productconfg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|solutionrelative:gezo.infrastructure\\persistence\\configuration\\productconfg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.infrastructure\\persistence\\storedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D5FA7FD-F749-6DAC-6B23-38BCC35EAE79}|Gezo.Infrastructure\\Gezo.Infrastructure.csproj|solutionrelative:gezo.infrastructure\\persistence\\storedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96984865-C703-1AEB-FB10-D51B42F35659}|Gezo.Api\\Gezo.Api.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{96984865-C703-1AEB-FB10-D51B42F35659}|Gezo.Api\\Gezo.Api.csproj|solutionrelative:gezo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96984865-C703-1AEB-FB10-D51B42F35659}|Gezo.Api\\Gezo.Api.csproj|e:\\gezo store\\backend\\gezo.api\\gezo.api\\gezo.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{96984865-C703-1AEB-FB10-D51B42F35659}|Gezo.Api\\Gezo.Api.csproj|solutionrelative:gezo.api\\gezo.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +54,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Gezo.Infrastructure",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Gezo.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Gezo.Infrastructure\\Gezo.Infrastructure.csproj",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Gezo.Infrastructure.csproj",
+              "RelativeToolTip": "Gezo.Infrastructure\\Gezo.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-27T16:40:06.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Gezo.Application\\DependencyInjection.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "Gezo.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T16:38:58.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "productConfg.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Persistence\\configuration\\productConfg.cs",
+              "RelativeDocumentMoniker": "Gezo.Infrastructure\\Persistence\\configuration\\productConfg.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Persistence\\configuration\\productConfg.cs",
+              "RelativeToolTip": "Gezo.Infrastructure\\Persistence\\configuration\\productConfg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T11:58:13.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Gezo.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Gezo.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T10:22:18.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Gezo.Api\\appsettings.json",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Api\\appsettings.json",
+              "RelativeToolTip": "Gezo.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-26T09:40:06.037Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -30,6 +140,84 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StoreDbContext.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Persistence\\StoreDbContext.cs",
+              "RelativeDocumentMoniker": "Gezo.Infrastructure\\Persistence\\StoreDbContext.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Infrastructure\\Persistence\\StoreDbContext.cs",
+              "RelativeToolTip": "Gezo.Infrastructure\\Persistence\\StoreDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T08:56:53.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Gezo.Api",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Api\\Gezo.Api.csproj",
+              "RelativeDocumentMoniker": "Gezo.Api\\Gezo.Api.csproj",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Api\\Gezo.Api.csproj",
+              "RelativeToolTip": "Gezo.Api\\Gezo.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-26T08:32:03.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductImage.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\ProductImage.cs",
+              "RelativeDocumentMoniker": "Gezo.Domain\\Entities\\ProductImage.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\ProductImage.cs",
+              "RelativeToolTip": "Gezo.Domain\\Entities\\ProductImage.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T07:22:48.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Brand.cs",
+              "RelativeDocumentMoniker": "Gezo.Domain\\Entities\\Brand.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Brand.cs",
+              "RelativeToolTip": "Gezo.Domain\\Entities\\Brand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T07:22:27.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "Gezo.Domain\\Entities\\Category.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Category.cs",
+              "RelativeToolTip": "Gezo.Domain\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T07:22:15.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "Gezo.Domain\\Entities\\Product.cs",
+              "ToolTip": "E:\\Gezo Store\\backend\\Gezo.Api\\Gezo.Domain\\Entities\\Product.cs",
+              "RelativeToolTip": "Gezo.Domain\\Entities\\Product.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T07:21:57.602Z",
+              "EditorCaption": ""
             }
           ]
         }

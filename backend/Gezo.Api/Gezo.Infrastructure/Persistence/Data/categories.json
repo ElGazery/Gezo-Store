@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "Name": "Smartphones",
+    "Description": "Latest smartphones and accessories",
+    "Slug": "smartphones",
+    "ImageUrl": "https://cdn.gezo.com/categories/smartphones.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-05T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "Name": "Laptops",
+    "Description": "Laptops and notebooks for work and play",
+    "Slug": "laptops",
+    "ImageUrl": "https://cdn.gezo.com/categories/laptops.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-06T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 3,
+    "Name": "Home Appliances",
+    "Description": "Appliances to make home life easier",
+    "Slug": "home-appliances",
+    "ImageUrl": "https://cdn.gezo.com/categories/home-appliances.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-07T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 4,
+    "Name": "Kitchenware",
+    "Description": "Cookware, utensils and kitchen gadgets",
+    "Slug": "kitchenware",
+    "ImageUrl": "https://cdn.gezo.com/categories/kitchenware.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-08T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 5,
+    "Name": "Men's Clothing",
+    "Description": "Apparel for men",
+    "Slug": "mens-clothing",
+    "ImageUrl": "https://cdn.gezo.com/categories/mens-clothing.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-09T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 6,
+    "Name": "Women's Clothing",
+    "Description": "Apparel for women",
+    "Slug": "womens-clothing",
+    "ImageUrl": "https://cdn.gezo.com/categories/womens-clothing.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-10T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 7,
+    "Name": "Footwear",
+    "Description": "Shoes, sneakers and boots",
+    "Slug": "footwear",
+    "ImageUrl": "https://cdn.gezo.com/categories/footwear.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-11T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 8,
+    "Name": "Sports & Outdoors",
+    "Description": "Gear for sports and outdoor activities",
+    "Slug": "sports-outdoors",
+    "ImageUrl": "https://cdn.gezo.com/categories/sports-outdoors.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-12T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 9,
+    "Name": "Gaming",
+    "Description": "Consoles, games and gaming accessories",
+    "Slug": "gaming",
+    "ImageUrl": "https://cdn.gezo.com/categories/gaming.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-13T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 10,
+    "Name": "Furniture",
+    "Description": "Furniture for home and office",
+    "Slug": "furniture",
+    "ImageUrl": "https://cdn.gezo.com/categories/furniture.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-14T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 11,
+    "Name": "Beauty & Personal Care",
+    "Description": "Skincare, haircare and grooming products",
+    "Slug": "beauty-personal-care",
+    "ImageUrl": "https://cdn.gezo.com/categories/beauty-personal-care.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-15T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  },
+  {
+    "Id": 12,
+    "Name": "Audio",
+    "Description": "Headphones, speakers and audio equipment",
+    "Slug": "audio",
+    "ImageUrl": "https://cdn.gezo.com/categories/audio.jpg",
+    "IsActive": true,
+    "CreatedAt": "2026-03-16T10:00:00Z",
+    "UpdatedAt": "2026-09-10T10:00:00Z"
+  }
+]
