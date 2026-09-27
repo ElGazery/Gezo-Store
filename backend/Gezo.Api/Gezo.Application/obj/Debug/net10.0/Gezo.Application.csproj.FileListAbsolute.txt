@@ -1,0 +1,16 @@
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\bin\Debug\net10.0\Gezo.Application.deps.json
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\bin\Debug\net10.0\Gezo.Application.dll
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\bin\Debug\net10.0\Gezo.Application.pdb
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\bin\Debug\net10.0\Gezo.Domain.dll
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\bin\Debug\net10.0\Gezo.Domain.pdb
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.csproj.AssemblyReference.cache
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.AssemblyInfoInputs.cache
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.AssemblyInfo.cs
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.csproj.CoreCompileInputs.cache
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.sourcelink.json
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.App.6E1A7345.Up2Date
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.dll
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\refint\Gezo.Application.dll
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\Gezo.Application.pdb
+E:\Gezo Store\backend\Gezo.Api\Gezo.Application\obj\Debug\net10.0\ref\Gezo.Application.dll
