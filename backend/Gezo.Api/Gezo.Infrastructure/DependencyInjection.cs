@@ -1,4 +1,6 @@
-﻿using Gezo.Infrastructure.Persistence;
+﻿using Gezo.Application.Interfaces.Repositories;
+using Gezo.Infrastructure.Persistence;
+using Gezo.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +15,8 @@ namespace Gezo.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("myConnection")));
+            services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+
             
             return services;
         }

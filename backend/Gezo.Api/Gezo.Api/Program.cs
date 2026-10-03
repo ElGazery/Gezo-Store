@@ -1,3 +1,4 @@
+using Gezo.Api.MiddleWares;
 using Gezo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
+app.UseMiddleware<GlobalExceptionHanlderMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

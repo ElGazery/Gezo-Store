@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Gezo.Application\Gezo.Application.csproj" />
     <ProjectReference Include="..\Gezo.Infrastructure\Gezo.Infrastructure.csproj" />
   </ItemGroup>
