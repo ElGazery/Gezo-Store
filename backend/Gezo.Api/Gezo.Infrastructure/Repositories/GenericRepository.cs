@@ -19,13 +19,11 @@ namespace Gezo.Infrastructure.Repositories
         public async Task AddAsync(T entity)
         {
             await _dbset.AddAsync(entity);
-            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(T entity)
         {
              _dbset.Remove(entity);
-            await _context.SaveChangesAsync();
         }
 
         public async Task<List<T>> GetAllAsync()
@@ -42,7 +40,6 @@ namespace Gezo.Infrastructure.Repositories
         public async Task UpdateAsync(T entity)
         {
              _dbset.Update(entity);
-            await _context.SaveChangesAsync();
         }
     }
 }

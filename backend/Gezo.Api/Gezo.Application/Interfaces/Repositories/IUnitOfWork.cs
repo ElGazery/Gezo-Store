@@ -6,7 +6,8 @@ namespace Gezo.Application.Interfaces.Repositories
 {
     public interface IUnitOfWork
     {
-
+        IGenericRepository<T> GenericRepository<T>() where T : class;
+        Task<int> SaveChangesAsync();
 
     }
 }
