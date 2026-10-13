@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Gezo.Application.Features.Products.Queries.GetProdcutByIdQuery;
+using Gezo.Domain.Entities;
+using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gezo.Api.Controllers
@@ -7,10 +10,22 @@ namespace Gezo.Api.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        []
-        public async Task GetProducts()
+        private readonly IMediator _mediator;
+        public ProductController(IMediator mediator)
         {
-            return Ok();
+            _mediator = mediator;
         }
+        //[HttpGet("GetProducts")]
+        ////public async Task<ICollection<>> GetProducts()
+        //{
+        //    return Ok();
+        //}
+        [HttpGet("GetProductById/{id}")]
+        public async Task<ActionResult<GetProdcutByIdQuery>> GetProductById(int id)
+        {
+
+            return Ok(await _mediator.Send(new GetProdcutByIdQuery(id)));
+        }
+
     }
 }

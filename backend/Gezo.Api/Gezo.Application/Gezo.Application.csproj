@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.2.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
   </ItemGroup>
 
@@ -15,10 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Products\DTOs\" />
     <Folder Include="Features\Products\Commands\" />
-    <Folder Include="Features\Products\Queries\" />
     <Folder Include="Interfaces\Services\" />
+    <Folder Include="vaildators\" />
   </ItemGroup>
 
 </Project>

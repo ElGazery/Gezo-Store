@@ -16,8 +16,10 @@ namespace Gezo.Infrastructure
         {
             services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("myConnection")));
             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            
+
+
             return services;
         }
     }

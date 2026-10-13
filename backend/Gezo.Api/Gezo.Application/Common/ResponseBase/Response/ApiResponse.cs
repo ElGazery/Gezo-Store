@@ -1,4 +1,4 @@
-﻿namespace Gezo.Api.ResponseBase.Response
+﻿namespace Gezo.ApiResponseBase.Response
 {
     public class ApiResponse<T>
     {

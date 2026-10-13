@@ -1,4 +1,4 @@
-﻿using Gezo.Api.ResponseBase.Response;
+﻿using Gezo.ApiResponseBase.Response;
 using Gezo.Domain.Exceptions;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Text.Json;
@@ -57,7 +57,7 @@ namespace Gezo.Api.MiddleWares
                 NotFoundCustomException => new ApiResponse<string>(ex.Message, StatusCodes.Status404NotFound),
                 BadRequestCustomException BR=> new ApiResponse<string>(ex.Message, StatusCodes.Status400BadRequest,errors:BR.Errors?.ToList()),
                 UnauthorizedCustomException=>new ApiResponse<string>(ex.Message,StatusCodes.Status401Unauthorized),
-                _ => new ApiResponse<string>( "An unexpected error occurred.", StatusCodes.Status500InternalServerError)
+                _ => new ApiResponse<string>(ErrorMessage, StatusCodes.Status500InternalServerError)
 
             };
             context.Response.StatusCode = response.StatusCode;
