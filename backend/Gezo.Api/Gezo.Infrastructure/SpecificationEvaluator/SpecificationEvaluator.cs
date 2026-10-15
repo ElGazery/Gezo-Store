@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-namespace Gezo.Infrastructure.SpecificationEvaluator
+namespace Gezo.Infrastructure.Specifications
 {
     public static class SpecificationEvaluator
     {
@@ -56,6 +56,17 @@ namespace Gezo.Infrastructure.SpecificationEvaluator
                 inputQuery = inputQuery.Skip(specification.Skip).Take(specification.Take);
             }
 
+
+            return inputQuery;
+        }
+        public static IQueryable<Entity> GetCountQuery<Entity>(
+          IQueryable<Entity> inputQuery,
+          ISpecification<Entity> specification) where Entity : class
+        {
+            if (specification.Criteria != null)
+            {
+                inputQuery = inputQuery.Where(specification.Criteria);
+            }
 
             return inputQuery;
         }

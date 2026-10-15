@@ -1,10 +1,11 @@
 ﻿using Gezo.Application.Interfaces.Repositories;
+using Gezo.Application.Specifications;
 using Gezo.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Gezo.Infrastructure.Specifications;
 namespace Gezo.Infrastructure.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
@@ -31,7 +32,12 @@ namespace Gezo.Infrastructure.Repositories
             return await _dbset.ToListAsync();
         }
 
-
+        public async Task<int> CountWithSpecAsync(ISpecification<T> spec)
+        {
+           return await SpecificationEvaluator
+                .GetCountQuery(_context.Set<T>(), spec)
+                .CountAsync();
+        }
         public async Task<T?> GetbyIdAsync(int id)
         {
             return await _dbset.FindAsync(id);
@@ -41,5 +47,14 @@ namespace Gezo.Infrastructure.Repositories
         {
              _dbset.Update(entity);
         }
+
+        public async Task<List<T>>  GetAllWithSpecAsync(ISpecification<T> spec)
+        {
+            return await SpecificationEvaluator.
+                            GetQuery(_context.Set<T>(), spec).
+                            AsNoTracking().
+                            ToListAsync();
+        }
+       
     }
 }

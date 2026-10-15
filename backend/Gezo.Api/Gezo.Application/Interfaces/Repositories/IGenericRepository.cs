@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gezo.Application.Specifications;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,5 +13,8 @@ namespace Gezo.Application.Interfaces.Repositories
         public Task AddAsync(T entity);
         public Task UpdateAsync(T entity);
         public Task DeleteAsync(T entity);
+
+        public Task<int> CountWithSpecAsync(ISpecification<T> spec);
+        public Task<List<T>> GetAllWithSpecAsync(ISpecification<T> spec);
     }
 }
