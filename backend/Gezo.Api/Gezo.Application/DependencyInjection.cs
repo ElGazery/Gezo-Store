@@ -13,7 +13,8 @@ namespace Gezo.Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddAutoMapper(cfg => { }, typeof(ProductProfile).Assembly);
+            services.AddAutoMapper(
+                cfg => { }, typeof(ProductProfile).Assembly);
             services.AddMediatR(typeof(DependencyInjection).Assembly);
 
             services.AddValidatorsFromAssembly(typeof(ValidationBehavior<,>).Assembly);

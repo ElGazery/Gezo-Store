@@ -18,7 +18,7 @@ namespace Gezo.Api.Controllers
             _mediator = mediator;
         }
         [HttpGet("GetProducts")]
-        public async Task<ActionResult> GetProducts( GetAllProductsQuery Query)
+        public async Task<ActionResult> GetProducts([FromQuery] GetAllProductsQuery Query)
         {
 
             return Ok(await _mediator.Send(Query));
