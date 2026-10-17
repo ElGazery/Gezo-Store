@@ -27,7 +27,7 @@ namespace Gezo.Application.Features.Categories.Queries.GetAllCategoryQuery
         public async Task<ApiResponse<IReadOnlyList<GetAllCategoriesQueryDto>>> Handle(GetAllCategoriesQuery query, CancellationToken cancellationToken)
         {
             var spec = new GetAllCategoriesSpacification();
-            var categoreies =await _unitOfWork.GenericRepository<Category>().GetAllWithSpecAsync(spec);
+            var categoreies =await _unitOfWork.GenericRepository<Category>().GetAllWithSpecAsync(spec, cancellationToken);
             var categoreiesDto = _mapper.Map<IReadOnlyList<GetAllCategoriesQueryDto>>(categoreies);
 
             return  new ApiResponse<IReadOnlyList<GetAllCategoriesQueryDto>>(categoreiesDto,"success",200);

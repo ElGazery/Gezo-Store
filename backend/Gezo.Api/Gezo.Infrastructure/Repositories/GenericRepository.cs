@@ -32,11 +32,11 @@ namespace Gezo.Infrastructure.Repositories
             return await _dbset.ToListAsync();
         }
 
-        public async Task<int> CountWithSpecAsync(ISpecification<T> spec)
+        public async Task<int> CountWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken=default)
         {
            return await SpecificationEvaluator
                 .GetCountQuery(_context.Set<T>(), spec)
-                .CountAsync();
+                .CountAsync(cancellationToken);
         }
         public async Task<T?> GetbyIdAsync(int id)
         {
@@ -48,12 +48,12 @@ namespace Gezo.Infrastructure.Repositories
              _dbset.Update(entity);
         }
 
-        public async Task<List<T>>  GetAllWithSpecAsync(ISpecification<T> spec)
+        public async Task<List<T>>  GetAllWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken = default)
         {
             return await SpecificationEvaluator.
                             GetQuery(_context.Set<T>(), spec).
                             AsNoTracking().
-                            ToListAsync();
+                            ToListAsync(cancellationToken);
         }
        
     }

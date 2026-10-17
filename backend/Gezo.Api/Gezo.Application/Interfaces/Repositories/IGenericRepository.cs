@@ -14,7 +14,7 @@ namespace Gezo.Application.Interfaces.Repositories
         public Task UpdateAsync(T entity);
         public Task DeleteAsync(T entity);
 
-        public Task<int> CountWithSpecAsync(ISpecification<T> spec);
-        public Task<List<T>> GetAllWithSpecAsync(ISpecification<T> spec);
+        public Task<int> CountWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken );
+        public Task<List<T>> GetAllWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken );
     }
 }

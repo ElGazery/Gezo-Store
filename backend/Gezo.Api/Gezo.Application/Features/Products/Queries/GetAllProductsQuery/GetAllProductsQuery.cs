@@ -34,15 +34,15 @@ namespace Gezo.Application.Features.Products.Queries.GetAllProductsQuery
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-      public async Task<ApiResponse<PaginationResponse<GetAllProductsQueryDto>>> Handle(GetAllProductsQuery query, CancellationToken cancellation)
+      public async Task<ApiResponse<PaginationResponse<GetAllProductsQueryDto>>> Handle(GetAllProductsQuery query, CancellationToken cancellationToken)
         {
             var spec = new ProductsWithFiltersSpecification(query);
 
             var repo = _unitOfWork.GenericRepository<Product>();
 
-            var totalCount = await repo.CountWithSpecAsync(spec);
+            var totalCount = await repo.CountWithSpecAsync(spec,cancellationToken);
 
-            var products = await repo.GetAllWithSpecAsync(spec);
+            var products = await repo.GetAllWithSpecAsync(spec, cancellationToken);
 
             var mapProducts = _mapper.Map<IReadOnlyList<GetAllProductsQueryDto>>(products);
 
