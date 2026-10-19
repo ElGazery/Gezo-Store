@@ -3,6 +3,7 @@ using AutoMapper;
 using Gezo.ApiResponseBase.Response;
 using Gezo.Application.Interfaces.Repositories;
 using Gezo.Domain.Entities;
+using Gezo.Domain.Exceptions;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace Gezo.Application.Features.Products.Queries.GetProdcutByIdQuery
             var getProduct = await _unitOfWork.GenericRepository<Product>().GetbyIdAsync(query.id);
             if(getProduct == null)
             {
-                return  new ApiResponse<GetProductByIdQueryDto>("Product not found",404);
+                throw new NotFoundCustomException($"Product with ID {query.id} was not found.");
             }
             var product = _mapper.Map<GetProductByIdQueryDto>(getProduct);
 

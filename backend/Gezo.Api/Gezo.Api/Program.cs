@@ -1,6 +1,11 @@
 using Gezo.Api.MiddleWares;
 using Gezo.Application;
 using Gezo.Infrastructure;
+using Gezo.Infrastructure.Identity;
+using Gezo.Infrastructure.Persistence;
+using Gezo.Infrastructure.Persistence.Seeding;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +18,7 @@ builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 var app = builder.Build();
 
+await DatabaseSeeder.SeedAsync(app.Services);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

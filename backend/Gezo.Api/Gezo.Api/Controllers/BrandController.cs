@@ -16,7 +16,7 @@ namespace Gezo.Api.Controllers
             _mediator = mediator;
         }
         [HttpGet("GetAllBrands")]
-        public async Task<ApiResponse<IReadOnlyList<GetAllBrandsQueryDto>>> GetAllBrands(CancellationToken cancellationToken)
+        public async Task<ActionResult<ApiResponse<IReadOnlyList<GetAllBrandsQueryDto>>>> GetAllBrands(CancellationToken cancellationToken)
         {
             return await _mediator.Send(new GetAllBrandsQuery(),  cancellationToken);
         }
