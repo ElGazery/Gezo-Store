@@ -24,7 +24,6 @@
     <Folder Include="Features\Brands\Commands\" />
     <Folder Include="Features\Categories\Commands\" />
     <Folder Include="Features\Products\Commands\" />
-    <Folder Include="Interfaces\Services\" />
   </ItemGroup>
 
 </Project>

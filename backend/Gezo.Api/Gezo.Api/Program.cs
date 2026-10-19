@@ -1,11 +1,9 @@
+using Gezo.Api.Extensions;
 using Gezo.Api.MiddleWares;
 using Gezo.Application;
 using Gezo.Infrastructure;
-using Gezo.Infrastructure.Identity;
-using Gezo.Infrastructure.Persistence;
 using Gezo.Infrastructure.Persistence.Seeding;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +14,9 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
+builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 await DatabaseSeeder.SeedAsync(app.Services);

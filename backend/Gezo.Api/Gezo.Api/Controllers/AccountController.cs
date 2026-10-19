@@ -14,16 +14,16 @@ namespace Gezo.Api.Controllers
             _mediator = mediator;
             
         }
-        [HttpPost("Register")]
-        public Task<ActionResult> Register()
-        {
-            return Ok();
-        }
-        [HttpPost("Login")]
-        public Task<AcceptedResult> Login()
-        {
-            return Ok();
-        }
+        //[HttpPost("Register")]
+        //public Task<ActionResult> Register()
+        //{
+        //    return Ok();
+        //}
+        //[HttpPost("Login")]
+        //public Task<AcceptedResult> Login()
+        //{
+        //    return Ok();
+        //}
 
     }
 }

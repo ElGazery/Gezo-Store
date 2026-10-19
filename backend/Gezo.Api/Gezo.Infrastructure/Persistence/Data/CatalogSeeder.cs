@@ -39,7 +39,7 @@ public static class CatalogSeeder
             return; // already seeded
 
         var path = Path.Combine(
-            AppContext.BaseDirectory, "Persistence", "Seeding", "Data", fileName);
+            AppContext.BaseDirectory, "Persistence", "Data", fileName);
 
         var json = await File.ReadAllTextAsync(path, ct);
         var items = JsonSerializer.Deserialize<List<T>>(json, JsonOptions)

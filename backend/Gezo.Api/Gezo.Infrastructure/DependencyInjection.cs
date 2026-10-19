@@ -1,7 +1,10 @@
-﻿using Gezo.Application.Interfaces.Repositories;
+﻿using Gezo.Application.Common.Settings;
+using Gezo.Application.Interfaces.Repositories;
+using Gezo.Application.Interfaces.Services;
 using Gezo.Domain.Entities;
 using Gezo.Infrastructure.Persistence;
 using Gezo.Infrastructure.Repositories;
+using Gezo.Infrastructure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -32,6 +35,10 @@ namespace Gezo.Infrastructure
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
                 options.Lockout.AllowedForNewUsers = true;
             });
+
+            services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
+            services.AddScoped<ITokenService, TokenService>();
+
 
             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
