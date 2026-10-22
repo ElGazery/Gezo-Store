@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace Gezo.Infrastructure.Persistence.Seeding;
-
+// it's need a review 
 public static class CatalogSeeder
 {
     private static readonly JsonSerializerOptions JsonOptions = new()

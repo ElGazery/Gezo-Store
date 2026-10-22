@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gezo.Domain.Exceptions
 {
-    public class UnauthorizedCustomException() :Exception("invaild operation")
+    public class UnauthorizedCustomException(string message) :Exception(message)
     {
             
     }
