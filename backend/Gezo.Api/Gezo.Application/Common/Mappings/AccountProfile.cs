@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Gezo.Application.Features.Accounts.Commands.LoginCommand;
 using Gezo.Application.Features.Accounts.Commands.RegisterCommand;
+using Gezo.Application.Features.Accounts.Queries.GetCurrentUserQuery;
 using Gezo.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,9 @@ namespace Gezo.Application.Common.Mappings
             CreateMap<ApplicationUser, LoginResponseDto>().
                  ForMember(dist => dist.UserId, option => option.MapFrom(src => src.Id))
                 .ForMember(dist => dist.Token, option => option.Ignore());
+            CreateMap<ApplicationUser, GetCurrentUserDto>().
+                ForMember(dist => dist.UserId, option => option.MapFrom(src => src.Id));
+
         }
     }
 }

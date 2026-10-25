@@ -55,6 +55,12 @@ namespace Gezo.Infrastructure.Repositories
                             AsNoTracking().
                             ToListAsync(cancellationToken);
         }
-       
+
+        public async Task<T?> GetFirstOrDefaultWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken)
+        {
+            return await SpecificationEvaluator.
+                         GetQuery(_context.Set<T>(), spec).
+                         FirstOrDefaultAsync();
+        }
     }
 }

@@ -16,5 +16,6 @@ namespace Gezo.Application.Interfaces.Repositories
 
         public Task<int> CountWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken );
         public Task<List<T>> GetAllWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken );
+        public Task<T?> GetFirstOrDefaultWithSpecAsync(ISpecification<T> spec, CancellationToken cancellationToken);
     }
 }

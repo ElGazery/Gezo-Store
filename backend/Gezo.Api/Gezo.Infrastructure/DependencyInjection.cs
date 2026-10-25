@@ -38,12 +38,15 @@ namespace Gezo.Infrastructure
 
             services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
             services.AddScoped<ITokenService, TokenService>();
-
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddScoped(typeof(IGenericRepository<>),typeof(GenericRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IRefreshTokenService, RefreshTokenService>();
 
+            services.AddHttpContextAccessor();
 
+            services.AddScoped<IRefreshTokenCookieService,RefreshTokenCookieService>();
 
 
             return services;

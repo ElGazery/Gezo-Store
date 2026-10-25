@@ -18,6 +18,8 @@ namespace Gezo.Infrastructure.Persistence
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category>Categories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
 
 
     }

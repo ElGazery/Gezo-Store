@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Text;
 
 namespace Gezo.Application.Features.Accounts.Commands.LoginCommand
@@ -23,11 +24,15 @@ namespace Gezo.Application.Features.Accounts.Commands.LoginCommand
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ITokenService _tokenService;
         private readonly IMapper _mapper;
-        public LoginCommandHandler(UserManager<ApplicationUser> userManager,ITokenService tokenService,IMapper mapper)
+        private readonly IRefreshTokenCookieService _refreshTokenCookieService;
+        private readonly IRefreshTokenService _refreshTokenService;
+        public LoginCommandHandler(UserManager<ApplicationUser> userManager,ITokenService tokenService,IMapper mapper,IRefreshTokenCookieService refreshTokenCookieService,IRefreshTokenService refreshTokenService)
         {
             _userManager = userManager;
             _tokenService = tokenService;
             _mapper = mapper;
+            _refreshTokenCookieService = refreshTokenCookieService;
+            _refreshTokenService = refreshTokenService;
         }
         public async Task<ApiResponse<LoginResponseDto>> Handle(LoginCommand command, CancellationToken cancellationToken)
         {
@@ -39,11 +44,14 @@ namespace Gezo.Application.Features.Accounts.Commands.LoginCommand
             var isVaildPassword = await _userManager.CheckPasswordAsync(user,command.password);
             if(!isVaildPassword)
                 throw new UnauthorizedCustomException("You email or password is not correct");
-            //step 3 get the roles for this use
-            var userRoles = await _userManager.GetRolesAsync(user);
-            //step 4 generat token 
+       
+            //step 3 generate token 
 
             var token = await _tokenService.GenerateTokenAsync(user);
+            //step 4 generate  referesh token token 
+            var rawRefershToken = await _refreshTokenService.CreateAsync(user, cancellationToken);
+            _refreshTokenCookieService.SetRefreshToken(rawRefershToken);
+
             //step 5 map the ApplicationUser to LoginCommandDto
             var dto = _mapper.Map<LoginResponseDto>(user);
             dto.Token = token;
