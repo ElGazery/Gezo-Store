@@ -31,7 +31,9 @@ namespace Gezo.Application.Features.Accounts.Queries.GetCurrentUserQuery
         public async Task<ApiResponse<GetCurrentUserDto>> Handle(GetCurrentUserQuery request, CancellationToken cancellationToken)
         {
                            
-            var user = _currentUserService.GetCurrentUser();
+            var user =await _currentUserService.GetCurrentUser();
+            if (user is null)
+                throw new BadRequestCustomException("User not found");
             var dto = _mapper.Map<GetCurrentUserDto>(user);
             return new ApiResponse<GetCurrentUserDto>(
                 dto,

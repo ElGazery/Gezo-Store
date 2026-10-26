@@ -13,13 +13,13 @@ namespace Gezo.Infrastructure.Services
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailService _emailService;
-        private readonly EmailTemplateService _emailTemplateService;
+        private readonly IEmailTemplateService _emailTemplateService;
         private readonly FrontendSettings _frontendSettings;
 
         public EmailConfirmationService( 
             UserManager<ApplicationUser> userManager,  
             IEmailService emailService, 
-            EmailTemplateService emailTemplateService,
+            IEmailTemplateService emailTemplateService,
             IOptions<FrontendSettings> frontendOptions)
         {
             _userManager = userManager;

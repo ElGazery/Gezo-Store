@@ -60,6 +60,7 @@ namespace Gezo.Infrastructure
                 IEmailConfirmationService,
                 EmailConfirmationService>();
             services.AddScoped<IEmailTemplateService, EmailTemplateService>();
+            services.AddScoped<IPasswordResetService, PasswordResetService>();
             return services;
         }
     }

@@ -1,9 +1,11 @@
 ﻿using Gezo.ApiResponseBase.Response;
 using Gezo.Application.Features.Accounts.Commands.ConfirmEmailCommand;
+using Gezo.Application.Features.Accounts.Commands.ForgetPasswordCommand;
 using Gezo.Application.Features.Accounts.Commands.LoginCommand;
 using Gezo.Application.Features.Accounts.Commands.LogoutCommand;
 using Gezo.Application.Features.Accounts.Commands.RefreshTokenCommand;
 using Gezo.Application.Features.Accounts.Commands.RegisterCommand;
+using Gezo.Application.Features.Accounts.Commands.ResetPasswordCommand;
 using Gezo.Application.Features.Accounts.Queries.GetCurrentUserQuery;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -50,19 +52,32 @@ namespace Gezo.Api.Controllers
             var result = await _mediator.Send(new RefreshTokenCommand());
             return StatusCode(result.StatusCode, result);
         }
-        [AllowAnonymous]
-        [HttpDelete("Logout")]
-        public async Task<ActionResult> Logout()
-        {
-            var result = await _mediator.Send(new LogoutCommand());
-            return StatusCode(result.StatusCode,result);
-        }
-        //[Authorize]
+      
+       
         [HttpPost("confirm-email")]
         public async Task<ActionResult> ConfirmEmail(ConfirmEmailCommand command)
         {
             var result = await _mediator.Send(command);
             return StatusCode(result.StatusCode,result);
+        }
+        [HttpPost("forget-password")]
+        public async Task<ActionResult> ForgetPassword(ForgetPasswordCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return StatusCode(result.StatusCode,result);
+        }
+        [HttpPost("reset-password")]
+        public async Task<ActionResult> ResetPassword(ResetPasswordCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return StatusCode(result.StatusCode,result);
+        }
+        [AllowAnonymous]
+        [HttpDelete("Logout")]
+        public async Task<ActionResult> Logout()
+        {
+            var result = await _mediator.Send(new LogoutCommand());
+            return StatusCode(result.StatusCode, result);
         }
 
     }
