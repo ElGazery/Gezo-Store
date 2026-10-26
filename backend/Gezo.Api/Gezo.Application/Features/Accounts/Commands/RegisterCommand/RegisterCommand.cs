@@ -26,13 +26,15 @@ namespace Gezo.Application.Features.Accounts.Commands.RegisterCommand
     public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ApiResponse<RegisterResponseDto>>
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ITokenService _tokenService;
+        private readonly IEmailConfirmationService _emailConfirmationService;
         private readonly IMapper _mapper;
-        public RegisterCommandHandler(UserManager<ApplicationUser> userManager,ITokenService tokenService,IMapper mapper)
+        private readonly IEmailService _emailService;
+        public RegisterCommandHandler(UserManager<ApplicationUser> userManager,ITokenService tokenService,IMapper mapper,IEmailService emailService,IEmailConfirmationService emailConfirmationService)
         {
+            _emailConfirmationService = emailConfirmationService;
             _userManager = userManager;
-            _tokenService = tokenService;
             _mapper = mapper;
+            _emailService = emailService;
         }
 
         public async Task<ApiResponse<RegisterResponseDto>> Handle(RegisterCommand request, CancellationToken cancellationToken)
@@ -51,14 +53,16 @@ namespace Gezo.Application.Features.Accounts.Commands.RegisterCommand
             }
             var setRole = await _userManager.AddToRoleAsync(user, "Customer");
 
-            var token = await _tokenService.GenerateTokenAsync(user);
+            await _emailConfirmationService.SendConfirmationEmailAsync(
+            user,
+            cancellationToken);
+
 
             var dto = _mapper.Map<RegisterResponseDto>(user);
-            dto.Token = token;
-
+       
             return new ApiResponse<RegisterResponseDto>(
                 dto,
-                "Account registered successfully",
+                "Account registered successfully. Please check your email to confirm your account.",
                 StatusCodes.Status201Created);
            
 

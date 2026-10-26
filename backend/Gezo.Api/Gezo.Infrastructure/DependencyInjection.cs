@@ -47,8 +47,19 @@ namespace Gezo.Infrastructure
             services.AddHttpContextAccessor();
 
             services.AddScoped<IRefreshTokenCookieService,RefreshTokenCookieService>();
+            services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
 
+            services.AddScoped<IEmailService, EmailService>();
+          
+            services.Configure<FrontendSettings>(
+            configuration.GetSection("FrontendSettings"));
 
+            services.AddScoped<EmailTemplateService>();
+
+            services.AddScoped<
+                IEmailConfirmationService,
+                EmailConfirmationService>();
+            services.AddScoped<IEmailTemplateService, EmailTemplateService>();
             return services;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Gezo.ApiResponseBase.Response;
+using Gezo.Application.Features.Accounts.Commands.ConfirmEmailCommand;
 using Gezo.Application.Features.Accounts.Commands.LoginCommand;
 using Gezo.Application.Features.Accounts.Commands.LogoutCommand;
 using Gezo.Application.Features.Accounts.Commands.RefreshTokenCommand;
@@ -54,6 +55,13 @@ namespace Gezo.Api.Controllers
         public async Task<ActionResult> Logout()
         {
             var result = await _mediator.Send(new LogoutCommand());
+            return StatusCode(result.StatusCode,result);
+        }
+        //[Authorize]
+        [HttpPost("confirm-email")]
+        public async Task<ActionResult> ConfirmEmail(ConfirmEmailCommand command)
+        {
+            var result = await _mediator.Send(command);
             return StatusCode(result.StatusCode,result);
         }
 

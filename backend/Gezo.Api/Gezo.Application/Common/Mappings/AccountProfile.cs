@@ -19,8 +19,7 @@ namespace Gezo.Application.Common.Mappings
                 .ForMember(dist => dist.UserName, option => option.MapFrom(src => src.Email));
 
             CreateMap<ApplicationUser, RegisterResponseDto>()
-                .ForMember(dist => dist.UserId, option => option.MapFrom(src => src.Id))
-                .ForMember(dist => dist.Token, option => option.Ignore());
+                .ForMember(dist => dist.UserId, option => option.MapFrom(src => src.Id));
 
             CreateMap<ApplicationUser, LoginResponseDto>().
                  ForMember(dist => dist.UserId, option => option.MapFrom(src => src.Id))
