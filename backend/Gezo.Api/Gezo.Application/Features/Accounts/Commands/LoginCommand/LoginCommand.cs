@@ -42,6 +42,10 @@ namespace Gezo.Application.Features.Accounts.Commands.LoginCommand
             if (user is null)
                 throw new UnauthorizedCustomException("You email or password is not correct");
 
+            var isEmailConfirm = await _userManager.IsEmailConfirmedAsync(user);
+            if (!isEmailConfirm)
+                throw new BadRequestCustomException("Please confirm your email ");
+
             if (await _userManager.IsLockedOutAsync(user))
                 throw new UnauthorizedCustomException( "Your email or password is incorrect");
 
