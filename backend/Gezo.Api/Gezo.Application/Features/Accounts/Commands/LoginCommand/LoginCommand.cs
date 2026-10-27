@@ -41,10 +41,18 @@ namespace Gezo.Application.Features.Accounts.Commands.LoginCommand
             var user = await _userManager.FindByEmailAsync(command.email);
             if (user is null)
                 throw new UnauthorizedCustomException("You email or password is not correct");
+
+            if (await _userManager.IsLockedOutAsync(user))
+                throw new UnauthorizedCustomException( "Your email or password is incorrect");
+
             var isVaildPassword = await _userManager.CheckPasswordAsync(user,command.password);
-            if(!isVaildPassword)
+            if (!isVaildPassword)
+            {
+                await _userManager.AccessFailedAsync(user);
                 throw new UnauthorizedCustomException("You email or password is not correct");
-       
+            }
+
+            await _userManager.ResetAccessFailedCountAsync(user);
             //step 3 generate token 
 
             var token = await _tokenService.GenerateTokenAsync(user);
