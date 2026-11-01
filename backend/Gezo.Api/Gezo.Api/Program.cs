@@ -2,6 +2,7 @@ using Gezo.Api.Extensions;
 using Gezo.Api.MiddleWares;
 using Gezo.Application;
 using Gezo.Infrastructure;
+using Gezo.Infrastructure.Persistence.Seeding;
 using Scalar.AspNetCore;
 
 
@@ -19,7 +20,18 @@ builder.Services.AddAuthorization();
 builder.Services.AddScalarApi();
 var app = builder.Build();
 
-//await DatabaseSeeder.SeedAsync(app.Services);
+if (app.Environment.IsDevelopment())
+{
+    try
+    {
+        await DatabaseSeeder.SeedAsync(app.Services);
+    }
+    catch (Exception ex)
+    {
+        var logger = app.Services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while seeding the database.");
+    }
+}
 // Configure the HTTP request pipeline.
 
 if (app.Environment.IsDevelopment())

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Gezo.Application.Features.Products.Commands.AddProductCommand;
+using Gezo.Application.Features.Products.Commands.UpdateProductCommand;
 using Gezo.Application.Features.Products.Queries.GetAllProductsQuery;
 using Gezo.Application.Features.Products.Queries.GetProdcutByIdQuery;
 using Gezo.Domain.Entities;
@@ -23,6 +25,14 @@ namespace Gezo.Application.Common.Mappings
                 ForMember(dest=>dest.BrandName,opt=>opt.MapFrom(src=>src.Brand.Name)).
                 ForMember(dest => dest.MainImageUrl,opt => opt.MapFrom(src => src.Images.FirstOrDefault()!.ImageUrl)).
                 ForMember(dest=>dest.InStock,opt=>opt.MapFrom( src => src.StockQuantity > 0));
+
+            CreateMap<AddProductCommand, Product>().
+                ForMember(dest => dest.Images, opt => opt.Ignore());
+            CreateMap<UpdateProductCommand, Product>().
+                ForMember(dest=>dest.Images,opt=>opt.Ignore()).
+                ForMember(dest=>dest.Id,opt=>opt.Ignore());
+            
+
 
 
         }

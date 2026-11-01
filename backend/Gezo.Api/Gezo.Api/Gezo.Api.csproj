@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Gezo.Infrastructure\Gezo.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\products\" />
+  </ItemGroup>
+
 </Project>

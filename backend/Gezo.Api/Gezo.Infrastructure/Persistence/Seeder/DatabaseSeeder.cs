@@ -1,28 +1,29 @@
-﻿//using Gezo.Infrastructure.Identity;
-//using Gezo.Infrastructure.Persistence;
-//using Microsoft.AspNetCore.Identity;
-//using Microsoft.EntityFrameworkCore;
-//using Microsoft.Extensions.DependencyInjection;
+using Gezo.Domain.Entities;
+using Gezo.Infrastructure.Persistence.Seeder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-//namespace Gezo.Infrastructure.Persistence.Seeding;
+namespace Gezo.Infrastructure.Persistence.Seeding;
 
-//public static class DatabaseSeeder
-//{
-//    public static async Task SeedAsync(IServiceProvider services)
-//    {
-//        await using var scope = services.CreateAsyncScope();
+public static class DatabaseSeeder
+{
+    public static async Task SeedAsync(
+        IServiceProvider services,
+        CancellationToken ct = default)
+    {
+        await using var scope = services.CreateAsyncScope();
+        var sp = scope.ServiceProvider;
 
-//        var sp = scope.ServiceProvider;
+        var context = sp.GetRequiredService<StoreDbContext>();
+        await context.Database.MigrateAsync(ct);
 
-//        var context = sp.GetRequiredService<StoreDbContext>();
+        var roleManager = sp.GetRequiredService<RoleManager<IdentityRole>>();
+        await IdentitySeeder.SeedRolesAsync(roleManager);
 
-//        await context.Database.MigrateAsync();
+        var userManager = sp.GetRequiredService<UserManager<ApplicationUser>>();
+        await IdentitySeeder.SeedAdminUserAsync(userManager);
 
-//        var roleManager =
-//            sp.GetRequiredService<RoleManager<IdentityRole>>();
-
-//        await IdentitySeeder.SeedRolesAsync(roleManager);
-
-//        await CatalogSeeder.SeedAsync(context);
-//    }
-//}
+        await CatalogSeeder.SeedAsync(context, ct);
+    }
+}

@@ -14,6 +14,10 @@
 		<ProjectReference Include="..\Gezo.Application\Gezo.Application.csproj" />
 		<ProjectReference Include="..\Gezo.Domain\Gezo.Domain.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+
+		<None Update="Persistence\Data\*.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.12" />

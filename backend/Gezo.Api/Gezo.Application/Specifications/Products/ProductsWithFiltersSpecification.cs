@@ -14,7 +14,7 @@ namespace Gezo.Application.Specifications.Products
 
             //filters as here we can say where(e => ...)
 
-            Criteria = p => (!query.BrandId.HasValue || p.BrandId == query.BrandId.Value) &&
+            Criteria = p =>p.IsActive && (!query.BrandId.HasValue || p.BrandId == query.BrandId.Value) &&
                         (!query.CategoryId.HasValue || p.CategoryId == query.CategoryId.Value) &&
                         (!query.MinPrice.HasValue || p.Price >= query.MinPrice) &&
                         (!query.MaxPrice.HasValue || p.Price <= query.MaxPrice) &&

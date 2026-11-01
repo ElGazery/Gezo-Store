@@ -124,7 +124,7 @@ namespace Gezo.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brands");
+                    b.ToTable("Brands", (string)null);
                 });
 
             modelBuilder.Entity("Gezo.Domain.Entities.Category", b =>
@@ -161,7 +161,7 @@ namespace Gezo.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Gezo.Domain.Entities.Product", b =>
@@ -221,7 +221,7 @@ namespace Gezo.Infrastructure.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("products");
+                    b.ToTable("products", (string)null);
                 });
 
             modelBuilder.Entity("Gezo.Domain.Entities.ProductImage", b =>
@@ -252,7 +252,7 @@ namespace Gezo.Infrastructure.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImages", (string)null);
                 });
 
             modelBuilder.Entity("Gezo.Domain.Entities.RefreshToken", b =>
@@ -284,7 +284,7 @@ namespace Gezo.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

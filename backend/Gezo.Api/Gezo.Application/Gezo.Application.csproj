@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="Features\Brands\Commands\" />
     <Folder Include="Features\Categories\Commands\" />
-    <Folder Include="Features\Products\Commands\" />
   </ItemGroup>
 
 </Project>
