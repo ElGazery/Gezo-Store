@@ -14,7 +14,7 @@ namespace Gezo.Api.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
-       private readonly IMediator _mediator;
+        private readonly IMediator _mediator;
         public CategoryController(IMediator mediator)
         {
             _mediator = mediator;
@@ -24,16 +24,16 @@ namespace Gezo.Api.Controllers
         public async Task<ActionResult> GetAllCategories()
         {
             var result = await _mediator.Send(new GetAllCategoriesQuery());
-            return StatusCode(result.StatusCode,result);
+            return StatusCode(result.StatusCode, result);
         }
         [Authorize]
-        [HttpGet("GetCategoryById")]
+        [HttpGet("{id}")]
         public async Task<ActionResult> GetCategoryById(int id)
         {
             var result = await _mediator.Send(new GetCategoryByIdQuery(id));
             return StatusCode(result.StatusCode, result);
         }
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost("AddCategory")]
         public async Task<ActionResult> AddCategory(AddCategoryCommand command)
         {
@@ -41,14 +41,14 @@ namespace Gezo.Api.Controllers
             return StatusCode(result.StatusCode, result);
         }
         [Authorize(Roles = "Admin")]
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateCategory(UpdateCategoryCommand command)
         {
             var result = await _mediator.Send(command);
             return StatusCode(result.StatusCode, result);
         }
-        [Authorize(Roles ="Admin")]
-        [HttpDelete]
+        [Authorize(Roles = "Admin")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCategory(int id )
         {
             var result = await _mediator.Send(new DeleteCategoryCommand(id));

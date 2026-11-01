@@ -1,16 +1,16 @@
-﻿using FluentValidation;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Gezo.Application.Features.Categories.Commands.UpdateCategoryCommand
 {
-    public class UpdateCategoryCommandVaildator:AbstractValidator<UpdateCategoryCommand>
+    public class UpdateCategoryCommandVaildator : AbstractValidator<UpdateCategoryCommand>
     {
         public UpdateCategoryCommandVaildator()
         {
             RuleFor(x => x.Id)
-            .GreaterThan(0);
+                .GreaterThan(0);
 
             RuleFor(x => x.Name)
                 .NotEmpty()
@@ -25,8 +25,10 @@ namespace Gezo.Application.Features.Categories.Commands.UpdateCategoryCommand
                 .MaximumLength(150);
 
             RuleFor(x => x.ImageUrl)
-                .MaximumLength(500)
-                .When(x => !string.IsNullOrWhiteSpace(x.ImageUrl));
+                .Must(file => file == null || file.Length > 0)
+                .WithMessage("Uploaded image must not be empty.")
+                .Must(file => file == null || file.Length <= 5 * 1024 * 1024)
+                .WithMessage("Image file size must not exceed 5MB.");
         }
     }
 }
