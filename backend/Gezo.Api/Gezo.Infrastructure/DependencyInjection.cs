@@ -5,10 +5,12 @@ using Gezo.Domain.Entities;
 using Gezo.Infrastructure.Persistence;
 using Gezo.Infrastructure.Repositories;
 using Gezo.Infrastructure.Services;
+using Microsoft.AspNetCore.Components.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -62,6 +64,16 @@ namespace Gezo.Infrastructure
             services.AddScoped<IEmailTemplateService, EmailTemplateService>();
             services.AddScoped<IPasswordResetService, PasswordResetService>();
             services.AddScoped<IImageService, ImageService>();
+
+            services.AddSingleton<IConnectionMultiplexer>(sp =>
+            {
+                var connectionString =
+                    configuration.GetConnectionString("Redis");
+
+                return ConnectionMultiplexer.Connect(connectionString!);
+            });
+            services.AddScoped<IBasketService, BasketService>();
+
             return services;
         }
     }
