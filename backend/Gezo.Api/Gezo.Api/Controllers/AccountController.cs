@@ -1,4 +1,5 @@
 ﻿using Gezo.ApiResponseBase.Response;
+using Gezo.Application.Features.Accounts.Commands.ChangePasswordCommand;
 using Gezo.Application.Features.Accounts.Commands.ConfirmEmailCommand;
 using Gezo.Application.Features.Accounts.Commands.ForgetPasswordCommand;
 using Gezo.Application.Features.Accounts.Commands.LoginCommand;
@@ -71,6 +72,13 @@ namespace Gezo.Api.Controllers
         {
             var result = await _mediator.Send(command);
             return StatusCode(result.StatusCode,result);
+        }
+        [Authorize]
+        [HttpPut("Change-Password")]
+        public async Task<ActionResult> ChangePassword(ChangePasswordCommand command)
+        {
+            var result = await _mediator.Send(command);
+            return StatusCode(result.StatusCode, result);
         }
         [AllowAnonymous]
         [HttpDelete("Logout")]
