@@ -19,6 +19,9 @@ namespace Gezo.Infrastructure.Persistence
         public DbSet<Category>Categories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<DeliveryMethod> DeliveryMethods { get; set; }
 
 
 
