@@ -1,4 +1,4 @@
-﻿using Gezo.Domain.Entities;
+using Gezo.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,6 +21,7 @@ namespace Gezo.Infrastructure.Persistence
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<DeliveryMethod> DeliveryMethods { get; set; }
 
 
