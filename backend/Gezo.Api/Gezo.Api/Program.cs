@@ -3,21 +3,18 @@ using Gezo.Api.MiddleWares;
 using Gezo.Application;
 using Gezo.Infrastructure;
 using Gezo.Infrastructure.Persistence.Seeding;
-using Scalar.AspNetCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
-builder.Services.AddScalarApi();
+builder.Services.AddSwaggerDocumentation();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -32,14 +29,20 @@ if (app.Environment.IsDevelopment())
         logger.LogError(ex, "An error occurred while seeding the database.");
     }
 }
-// Configure the HTTP request pipeline.
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();            // /openapi/v1.json
-    app.MapScalarApiReference(); // /scalar/v1
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Gezo Store API v1");
+        options.RoutePrefix = "swagger";
+    });
 }
-app.MapGet("/", () => Results.Redirect("/scalar/v1"));
+
+app.MapGet("/", () => Results.Redirect("/swagger"));
+
 app.UseMiddleware<GlobalExceptionHanlderMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthentication();
