@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Gezo.Application.Features.Basket.Dtos;
 using Gezo.Domain.Entities;
 using Org.BouncyCastle.Asn1.Cmp;
@@ -39,7 +39,8 @@ namespace Gezo.Application.Common.Mappings
                opt => opt.Ignore());
 
             CreateMap<BasketItemDto, OrderItem>()
-                .ForMember(dist=>dist.UnitPrice,opt=>opt.MapFrom(src=>src.Price));
+                .ForMember(dist => dist.UnitPrice, opt => opt.MapFrom(src => src.Price))
+                .ForMember(dist => dist.PictureUrl, opt => opt.MapFrom(src => src.PictureUrl ?? string.Empty));
 
         }
     }

@@ -1,3 +1,4 @@
+using Gezo.Domain.Enums;
 using System;
 using System.Collections.Generic;
 
@@ -20,6 +21,7 @@ namespace Gezo.Application.Features.Orders.Dtos
         public int DeliveryMethodId { get; set; }
 
         public string DeliveryMethodName { get; set; } = string.Empty;
+        public PaymentMethod PaymentMethod { get; set; }
 
         public decimal DeliveryMethodCost { get; set; }
 

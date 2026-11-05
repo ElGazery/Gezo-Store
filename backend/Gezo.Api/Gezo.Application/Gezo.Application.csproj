@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Brands\Commands\" />
+    <Folder Include="Features\Payments\Queries\" />
   </ItemGroup>
 
 </Project>

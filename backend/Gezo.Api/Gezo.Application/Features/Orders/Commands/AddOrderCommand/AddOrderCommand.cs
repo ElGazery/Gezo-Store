@@ -4,6 +4,7 @@ using Gezo.Application.Features.Basket.Dtos;
 using Gezo.Application.Interfaces.Repositories;
 using Gezo.Application.Interfaces.Services;
 using Gezo.Domain.Entities;
+using Gezo.Domain.Enums;
 using Gezo.Domain.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -13,18 +14,19 @@ using System.Text;
 
 namespace Gezo.Application.Features.Orders.Commands.AddOrderCommand
 {
-    public record AddOrderCommand :IRequest<ApiResponse<bool>>
+    public record AddOrderCommand : IRequest<ApiResponse<bool>>
     {
-         public int DeliveryMethodId { get; set; }
-        public string ShipToName { get; set; } 
+        public int DeliveryMethodId { get; set; }
+        public string ShipToName { get; set; } = string.Empty;
 
-        public string ShipToPhone { get; set; } 
+        public string ShipToPhone { get; set; } = string.Empty;
 
-        public string ShipToAddress { get; set; } 
+        public string ShipToAddress { get; set; } = string.Empty;
 
-        public string ShipToCity { get; set; } 
+        public string ShipToCity { get; set; } = string.Empty;
 
         public string? ShipToPostalCode { get; set; }
+        public PaymentMethod PaymentMethod { get; set; }
     }
 
 

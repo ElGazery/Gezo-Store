@@ -55,7 +55,7 @@ namespace Gezo.Infrastructure
           
             services.Configure<FrontendSettings>(
             configuration.GetSection("FrontendSettings"));
-
+            services.Configure<StripeSettings>(configuration.GetSection(StripeSettings.SectionName));
             services.AddScoped<EmailTemplateService>();
 
             services.AddScoped<
@@ -73,7 +73,7 @@ namespace Gezo.Infrastructure
                 return ConnectionMultiplexer.Connect(connectionString!);
             });
             services.AddScoped<IBasketService, BasketService>();
-
+            services.AddScoped<IPaymentService, StripePaymentService>();
             return services;
         }
     }

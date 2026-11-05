@@ -20,8 +20,11 @@ namespace Gezo.Domain.Entities
         public OrderStatus Status { get; set; } = OrderStatus.Pending;
 
         public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Pending;
+        //if COD or Online
+        public PaymentMethod PaymentMethod { get; set; } = PaymentMethod.CashOnDelivery;
 
         public int DeliveryMethodId { get; set; }
+        public string? PaymentIntentId { get; set; }
 
         public DeliveryMethod DeliveryMethod { get; set; } = null!;
 
